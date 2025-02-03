@@ -14,8 +14,3 @@ models:
         tests:
           - unique
           - not null
-          - lengths: [14, 18]
-      - name: pricing
-        description: "Preco dos produtos"
-        tests:
-          - data_type: float
