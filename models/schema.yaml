@@ -1,0 +1,21 @@
+version: 1
+
+models:
+  - name: test_stage_vendas
+    description: "Verificacao dos dados de clientes e vendas"
+    columns:
+      - name: client_id
+        description: "id do cliente"
+        tests:
+          - unique
+          - not null
+      - name: documento
+        description: "documento do cliente"
+        tests:
+          - unique
+          - not null
+          - lengths: [14, 18]
+      - name: pricing
+        description: "Preco dos produtos"
+        tests:
+          - data_type: float
